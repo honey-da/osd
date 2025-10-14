@@ -59,14 +59,14 @@ BlendBot은 모델 간 편향을 상쇄하고,
 - Python **3.10 이상**
 - pip 최신 버전
 - 개인 API 키 (OpenAI / Google Gemini / Anthropic Claude)
-- (선택) Git 및 가상환경(Virtualenv)
+- Git 및 가상환경(Virtualenv)
 
 ---
 
 ### 2️ 저장소 클론
 ```bash
-git clone https://github.com/yourusername/BlendBot.git
-cd BlendBot
+git clone https://github.com/honey-da/osd.git
+cd osd
 ```   
 ### 3️ 가상환경 생성 및 활성화
 ```bash
@@ -108,8 +108,8 @@ streamlit run app.py
 
 ## 빠른 시작
 ```bash
-git clone https://github.com/yourusername/BlendBot.git
-cd BlendBot
+git clone https://github.com/honey-da/osd.git
+cd osd
 pip install -r requirements.txt #필수 패키지 모음
 ```
 ```ini
