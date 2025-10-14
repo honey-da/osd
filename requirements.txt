@@ -1,0 +1,8 @@
+streamlit
+openai
+anthropic
+google-generativeai
+scikit-learn
+spacy
+python-dotenv
+requests
