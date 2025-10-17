@@ -48,26 +48,5 @@ def weighted_merge(responses: Dict[str, str], scores: Dict[str, Scores]) -> str:
     merged = []
     for i, n in enumerate(names):
         text = strip_markdown(responses[n])
-        lines = [ln.strip() for ln in re.split(r"[\n\.]", text) if ln.strip()]
-        keep = max(2, int(5*weights[i]))
-        merged.extend(lines[:keep])
+        lines = [ln.strip() for ln in re.split(r"[\띠
 
-    # 중복 제거
-    seen = set()
-    uniq = []
-    for ln in merged:
-        key = re.sub(r"\s+", " ", ln.lower())
-        if key not in seen:
-            seen.add(key)
-            uniq.append(ln)
-
-    # 최종 합성
-    return " ".join(uniq[:12])
-
-def orchestrate(responses: Dict[str, str]) -> Dict:
-    scores = {name: evaluate(txt) for name, txt in responses.items()}
-    final = weighted_merge(responses, scores)
-    return {
-        "scores": {k: vars(v) for k, v in scores.items()},
-        "final": final
-    }
